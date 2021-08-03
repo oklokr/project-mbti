@@ -1,0 +1,367 @@
+body {
+
+    &.noneScroll {
+        height: 100%;
+        min-height:100%;
+        overflow: hidden;
+        touch-action: none;
+    }
+}
+
+.wrpa {
+    background: url('../img/KakaoTalk_20210609_121030825.jpg') no-repeat;
+    background-size: 2850px 1860px;
+    background-position: center;
+}
+
+.page1 {
+    height: 890px;
+    padding: 50px 0 0px;
+    position: relative;
+    
+    .page1-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+
+        .page1-title-wrap {
+            width: 375px;
+            height: 217px;
+            margin: 30px 0 60px 0;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .btn-wrap {
+            width: 350px;
+            position: relative;
+
+            button {
+                width: 100%;
+                height: 70px;
+                text-indent: -9999px;
+                background: url("../img/start-btn.png") no-repeat;
+                background-size: cover;
+            }
+        }
+
+        .page1-img-wrap {
+            width: 100%;
+            overflow: hidden;
+
+            .page1-imge {
+                width: 100%;
+                height: 324px;
+                margin-top: 70px;
+                background: url("../img/KakaoTalk_20210608_161429421.png") no-repeat center;
+                background-size: 1000px 324px;
+    
+                @media (max-width: 700px){
+                    width: 100%;
+                    background: url("../img/KakaoTalk_20210608_175813125.png") no-repeat;
+                    background-size: 100% 280px;
+                }
+            }
+        }
+    }
+}
+
+.page2 {
+    height: 970px;
+    padding-top: 80px;
+    position: relative;
+    overflow: hidden;
+
+    .page2-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .title-wrap {
+            line-height: 35px;
+            margin-bottom: 32px;
+
+            img {
+                display: block;
+                height: 35px;
+            }
+        }
+
+        .mbti-result-slide-wrap {
+            display: flex;
+            justify-content: center;
+            width: 900px;
+            height: 330px;
+            margin-bottom: 20px;
+            position: relative;
+
+            .swiper-container {
+                width: 100%;
+                height: 100%;
+
+                .swiper-slide {
+                    text-align: center;
+                    font-size: 18px;
+                    border: 4px solid #000;
+                    background: #fff;
+                    padding-top: 30px;
+                    opacity: 0;
+
+                    &.swiper-slide-prev {
+                        opacity: 0.5;
+                    }
+
+                    &.swiper-slide-active {
+                        opacity: 1;
+                        opacity: 1;
+                        background: #fff;
+                        z-index: 10;
+
+                        .mbti-imge-btn {
+                            pointer-events: initial;
+                        }
+                    }
+
+                    &.swiper-slide-next {
+                        opacity: 0.5;
+                    }
+
+                    .mbti-title {
+                        font-size: 35px;
+                        color: #0080ff;
+                        margin-bottom: 10px;
+                        font-family: ONE Mobile POP;
+                    }
+
+                    .mbti-subTitle {
+                        font-size: 22px;
+                        letter-spacing: -1px;
+                        font-family: ONE Mobile POP;
+                    }
+                
+                    .mbti-imge-btn {
+                        display: block;
+                        width: 180px;
+                        height: 180px;
+                        margin: 0 auto;
+                        pointer-events: none;
+
+                        .mbti-imge {
+                            width: 100%;
+                            height: 100%;
+                            margin: 0 auto;
+                        }
+                    }
+                    
+                }
+
+                .swiper-button-prev {
+
+                    @media (max-width: 500px){
+                        left: 330px;
+                    }
+
+                    &::after {
+                        font-weight: bold;
+                        color: #000;
+                    }
+                }
+                .swiper-button-next {
+
+                    @media (max-width: 500px){
+                        right: 330px;
+                    }
+
+                    &::after {
+                        font-weight: bold;
+                        color: #000;
+                    }
+                }
+            }
+
+            .action-box-wrap {
+                display: none;
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 20;
+                background: #000000b5;
+
+                @keyframes openDimAni {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
+
+                @keyframes openBoxAni {
+                    from { transform: scale(.1); }
+                    to { transform: scale(1); }
+                }
+
+                &.active {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    animation: openDimAni .4s forwards;
+
+                    .action-box-inner {
+                        animation: openBoxAni .4s forwards;
+                    }
+                }
+
+                .action-box-inner {
+                    width: 393px;
+                    height: 500px;
+                    background: #fff;
+                    padding: 6px 7px 12px;
+                    border: 4px solid #000;
+                    border-radius: 10px;
+                    overflow: hidden;
+
+                    .close-btn {
+                        display: flex;
+                        width: 17px;
+                        height: 17px;
+                        text-indent: -9999px;
+                        margin: 0 0 0 auto;
+                        background: url("../img/close-icon.png") no-repeat;
+                        background-size: 100%;
+                    }
+
+                    .action-box-title {
+                        width: 273px;
+                        height: 28px;
+                        line-height: 28px;
+                        font-size: 22px;
+                        font-weight: bold;
+                        letter-spacing: -2px;
+                        margin: 0 auto;
+                    }
+
+                    .action-imge {
+                        height: 200px;
+                    }
+
+                    .action-title {
+                        height: 38px;
+                        line-height: 38px;
+                        font-size: 35px;
+                        font-weight: 900;
+                        color: #0080ff;
+                    }
+
+                    .action-text {
+                        height: 25px;
+                        line-height: 25px;
+                        font-size: 20px;
+                        font-weight: bold;
+                        margin-bottom: 15px;
+                    }
+
+                    .action-details-text-wrap {
+                        height: 140px;
+                        text-align: left;
+                        overflow: hidden;
+                        overflow-y: auto;
+                    }
+                }
+            }
+        }
+
+        .download-btn-wrap {
+            padding-top: 40px;
+            margin-bottom: 100px;
+
+            .download-title {
+                height: 50px;
+                font-size: 22px;
+                line-height: 25px;
+                color: #fff;
+                letter-spacing: -2px;
+                margin-bottom: 13px;
+
+                @media (max-width: 500px){
+                    font-size: 20px;
+                }
+
+                span {
+                    color: #ffe000;
+                    font-weight: bold;
+                }
+            }
+
+            .download-btn {
+                display: block;
+                width: 350px;
+                height: 70px;
+                text-indent: -9999px;
+                margin: 0 auto;
+                background: url("../img/download-btn.png") no-repeat;
+                background-size: cover;
+            }
+        }
+
+        .sns-sharing-wrap {
+            width: 382px;
+
+            // .sns-sharing-title {
+            //     width: 218px;
+            //     height: 45px;
+            //     font-size: 26px;
+            //     font-weight: bold;
+            //     color: #fff;
+            //     margin: 0 auto 30px;
+            // }
+
+            .btn-wrap {
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                width: 100%;
+
+                button {
+                    width: 60px;
+                    height: 60px;
+                    margin: 0 15px;
+                    border-radius: 20px;
+                    box-shadow: 7px 6px 5px #00000033;
+
+                    &.facebook-btn {
+                        background: url("../img/facebook.png") no-repeat;
+                        background-size: 100%;
+                    }
+
+                    &.kakao-btn {
+                        background: url("../img/kakao.png") no-repeat;
+                        background-size: 100%;
+                    }
+
+                    &.insta-btn {
+                        background: url("../img/instagram.png") no-repeat;
+                        background-size: 100%;
+                    }
+                }
+            }
+        }
+
+        .nfqs-logo-wrap {
+            margin-top: 65px;
+
+            a {
+                display: block;
+                width: 223px;
+                height: 40px;
+                text-indent: -9999px;
+                background: url("../img/nfqs.png") no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+}

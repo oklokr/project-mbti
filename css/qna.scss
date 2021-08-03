@@ -1,0 +1,208 @@
+.qna-area {
+    background: url('../img/KakaoTalk_20210531_192302891.png') no-repeat;
+    background-size: 100% 100%;
+    padding: 90px 0 50px;
+    position: relative;
+
+    &::before {
+        display: block;
+        content: "";
+        width: 100%;
+        height: 60px;
+        background: url('../img/KakaoTalk_20210610_111724127.png') no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+    }
+
+    .top-area {
+        width: fit-content;
+        margin: 0 auto 18px;
+    
+        .title-imge-wrap {
+            width: 260px;
+            height: 155px;
+            margin: 0 auto 42px;
+    
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;    
+            }
+        }
+    
+        .title-text-wrap {
+            text-align: center;
+            padding: 0 15px;
+    
+            .title-imge {
+                width: 100%;
+            }
+        }
+    }
+    
+    .progress-area {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        width: 350px;
+        height: 57px;
+        margin: 0 auto 36px;
+        position: relative;
+    
+        .message-box {
+            width: 45px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 6px;
+            position: absolute;
+            top: 0px;
+            left: 44%;
+            border-radius: 2px;
+            background: #1789F7;
+            transition: .4s;
+    
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 6px 4px 0 4px;
+                border-color: #1789F7 transparent transparent transparent;
+                left: 50%;
+                transform: translateX(-50%) translateY(100%);
+            }
+    
+            .message-text {
+                font-size: 12px;
+                font-weight: bold;
+            }
+        }
+        
+        .progress-bar {
+            width: 350px;
+            height: 30px;
+            padding: 2.7px 2.1px;
+            border-radius: 20px;
+            background: #fff;
+    
+            .progress-inner {
+                width: 50%;
+                height: 100%;
+                border-radius: 20px;
+                background: #0080ff;
+                transition: .4s;
+            }
+        }
+    } 
+    
+    .question-area {
+        width: 350px;
+        margin: 0 auto 38px;
+    
+        .question-wrap {
+            width: 100%;
+            height: 480px;
+            text-align: center;
+            padding: 20px 20px;
+            margin-bottom: 12px;
+            border-radius: 15px;
+            background: #fff;
+    
+            .question-number {
+                text-align: center;
+                font-weight: bold;
+                margin: 0 auto;
+                margin-bottom: 18px;
+    
+                p {
+                    line-height: 33.7px;
+                    font-size: 19px;
+                    font-family: ONE Mobile POP;
+                    color: #1789F7;
+                }
+            }
+    
+            .question-title {
+                width: 100%;
+                line-height: 28px;
+                font-size: 24px;
+                letter-spacing: -0.5px;
+                font-family: ONE Mobile POP;
+                margin-bottom: 3.5px;
+            }
+    
+            .question-img {
+                width: 200px;
+                height: 200px;
+                margin-bottom: 10px;
+            }
+    
+            .question-click-item-wrap {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+    
+                .question-click-item {
+                    width: 150px;
+                    height: 98px;
+                    padding-top: 10px;
+                    border: 3px solid #000;
+                    border-radius: 10px;
+                    font-weight: bold;
+                    transition: .3s;
+    
+                    &.active {
+                        background: #0080ff;
+                        color: #fff;
+    
+                        .click-state {
+                            background: url('../img/check-active.png') no-repeat;
+                            background-size: cover;
+                        }
+                    }
+    
+                    .question-text {
+                        pointer-events: none;
+                        line-height: 18px;
+                        letter-spacing: -1px;
+                        font-size: 15px;
+                    }
+    
+                    .click-state {
+                        width: 17px;
+                        height: 17px;
+                        background: url('../img/check.png') no-repeat;
+                        background-size: cover;
+                        margin: 7px auto 0;
+                        transition: .3s;
+                        pointer-events: none;
+                    }
+                }
+            }
+        }
+    }
+    
+    .done-button-wrap {
+        text-align: center;
+    
+        button {
+            width: 350px;
+            height: 70px;
+
+            img {
+                display: none;
+                width: 100%;
+                height: 100%;
+
+                &.active {
+                    display: block;
+                }
+            }
+        }
+    }
+}

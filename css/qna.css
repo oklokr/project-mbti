@@ -1,0 +1,226 @@
+.qna-area {
+  background: url("../img/KakaoTalk_20210531_192302891.png") no-repeat;
+  background-size: 100% 100%;
+  padding: 90px 0 50px;
+  position: relative;
+}
+
+.qna-area::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 60px;
+  background: url("../img/KakaoTalk_20210610_111724127.png") no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+}
+
+.qna-area .top-area {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 18px;
+}
+
+.qna-area .top-area .title-imge-wrap {
+  width: 260px;
+  height: 155px;
+  margin: 0 auto 42px;
+}
+
+.qna-area .top-area .title-imge-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.qna-area .top-area .title-text-wrap {
+  text-align: center;
+  padding: 0 15px;
+}
+
+.qna-area .top-area .title-text-wrap .title-imge {
+  width: 100%;
+}
+
+.qna-area .progress-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 350px;
+  height: 57px;
+  margin: 0 auto 36px;
+  position: relative;
+}
+
+.qna-area .progress-area .message-box {
+  width: 45px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 6px;
+  position: absolute;
+  top: 0px;
+  left: 44%;
+  border-radius: 2px;
+  background: #1789F7;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.qna-area .progress-area .message-box::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 4px 0 4px;
+  border-color: #1789F7 transparent transparent transparent;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(100%);
+          transform: translateX(-50%) translateY(100%);
+}
+
+.qna-area .progress-area .message-box .message-text {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.qna-area .progress-area .progress-bar {
+  width: 350px;
+  height: 30px;
+  padding: 2.7px 2.1px;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.qna-area .progress-area .progress-bar .progress-inner {
+  width: 50%;
+  height: 100%;
+  border-radius: 20px;
+  background: #0080ff;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.qna-area .question-area {
+  width: 350px;
+  margin: 0 auto 38px;
+}
+
+.qna-area .question-area .question-wrap {
+  width: 100%;
+  height: 480px;
+  text-align: center;
+  padding: 20px 20px;
+  margin-bottom: 12px;
+  border-radius: 15px;
+  background: #fff;
+}
+
+.qna-area .question-area .question-wrap .question-number {
+  text-align: center;
+  font-weight: bold;
+  margin: 0 auto;
+  margin-bottom: 18px;
+}
+
+.qna-area .question-area .question-wrap .question-number p {
+  line-height: 33.7px;
+  font-size: 19px;
+  font-family: ONE Mobile POP;
+  color: #1789F7;
+}
+
+.qna-area .question-area .question-wrap .question-title {
+  width: 100%;
+  line-height: 28px;
+  font-size: 24px;
+  letter-spacing: -0.5px;
+  font-family: ONE Mobile POP;
+  margin-bottom: 3.5px;
+}
+
+.qna-area .question-area .question-wrap .question-img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.qna-area .question-area .question-wrap .question-click-item-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.qna-area .question-area .question-wrap .question-click-item-wrap .question-click-item {
+  width: 150px;
+  height: 98px;
+  padding-top: 10px;
+  border: 3px solid #000;
+  border-radius: 10px;
+  font-weight: bold;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.qna-area .question-area .question-wrap .question-click-item-wrap .question-click-item.active {
+  background: #0080ff;
+  color: #fff;
+}
+
+.qna-area .question-area .question-wrap .question-click-item-wrap .question-click-item.active .click-state {
+  background: url("../img/check-active.png") no-repeat;
+  background-size: cover;
+}
+
+.qna-area .question-area .question-wrap .question-click-item-wrap .question-click-item .question-text {
+  pointer-events: none;
+  line-height: 18px;
+  letter-spacing: -1px;
+  font-size: 15px;
+}
+
+.qna-area .question-area .question-wrap .question-click-item-wrap .question-click-item .click-state {
+  width: 17px;
+  height: 17px;
+  background: url("../img/check.png") no-repeat;
+  background-size: cover;
+  margin: 7px auto 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+  pointer-events: none;
+}
+
+.qna-area .done-button-wrap {
+  text-align: center;
+}
+
+.qna-area .done-button-wrap button {
+  width: 350px;
+  height: 70px;
+}
+
+.qna-area .done-button-wrap button img {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.qna-area .done-button-wrap button img.active {
+  display: block;
+}

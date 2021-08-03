@@ -1,0 +1,15 @@
+
+# BEGIN DS-XML-RPC-API
+# “DS-XML-RPC-API에서 시작”과 “DS-XML-RPC-API에서 끝” 사이의 지시(줄)은
+# 동적으로 생성하고, 워드프레스 필터를 통해서만 수정해야 합니다.
+# 이들 표지 사이의 지시를 변경하면 덮어쓸 것입니다.
+
+# Yoast SEO - XML Sitemap Rewrite Fix 
+RewriteEngine On
+RewriteBase /
+RewriteRule ^sitemap_index.xml$ /index.php?sitemap=1 [L]
+RewriteRule ^locations.kml$ /index.php?sitemap=wpseo_local_kml [L]
+RewriteRule ^geo_sitemap.xml$ /index.php?sitemap=geo [L]
+RewriteRule ^([^/]+?)-sitemap([0-9]+)?.xml$ /index.php?sitemap=$1&sitemap_n=$2 [L]
+RewriteRule ^([a-z]+)?-?sitemap.xsl$ /index.php?xsl=$1 [L]
+# END Yoast SEO - XML Sitemap Rewrite Fix

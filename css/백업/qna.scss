@@ -1,51 +1,33 @@
-@mixin boxSetting($display, $width, $height, $padding, $margin) {
-    display: $display;
-    width: $width;
-    height: $height;
-    padding: $padding;
-    margin: $margin;
-}
-
-@mixin backgroundSetting($bg, $bgSize) {
-    background: url($bg) no-repeat;
-    background-size: $bgSize;
-}
-
-@mixin positionSetting($pos, $top, $right, $bottom, $left, $zIndex) {
-    position: $pos;
-    top: $top;
-    right: $right;
-    bottom: $bottom;
-    left: $left;
-    z-index: $zIndex;
-}
-
-@mixin fontSetting($size, $color, $weight) {
-    font-size: $size;
-    color: $color;
-    font-weight: $weight;
-}
-
 .qna-area {
-    @include backgroundSetting("../img/KakaoTalk_20210531_192302891.png", 100% 100%);
+    background: url('../img/KakaoTalk_20210531_192302891.png') no-repeat;
+    background-size: 100% 100%;
     padding: 90px 0 50px;
     position: relative;
 
     &::before {
+        display: block;
         content: "";
-        @include boxSetting(block, 100%, 60px, null, null);
-        @include backgroundSetting('../img/KakaoTalk_20210610_111724127.png', cover);
-        @include positionSetting(absolute, 0, null, null, null, null);
+        width: 100%;
+        height: 60px;
+        background: url('../img/KakaoTalk_20210610_111724127.png') no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0;
     }
 
     .top-area {
-        @include boxSetting(null, fit-content, null, null, 0 auto 18px);
+        width: fit-content;
+        margin: 0 auto 18px;
     
         .title-imge-wrap {
-            @include boxSetting(null, 260px, 155px, null, 0 auto 42px);
+            width: 260px;
+            height: 155px;
+            margin: 0 auto 42px;
     
             img {
-                @include boxSetting(block, 100%, 100%, null, null);
+                display: block;
+                width: 100%;
+                height: 100%;    
             }
         }
     
@@ -60,38 +42,51 @@
     }
     
     .progress-area {
-        @include boxSetting(flex, 350px, 57px, null, 0 auto 36px);
+        display: flex;
         justify-content: flex-end;
         flex-direction: column;
+        width: 350px;
+        height: 57px;
+        margin: 0 auto 36px;
         position: relative;
     
         .message-box {
-            @include boxSetting(null, 45px, 20px, null, 0 0 6px 0);
-            @include positionSetting(absolute, 0, null, null, 44%, null);
+            width: 45px;
+            height: 20px;
             line-height: 20px;
             text-align: center;
             color: #fff;
+            margin-bottom: 6px;
+            position: absolute;
+            top: 0px;
+            left: 44%;
             border-radius: 2px;
             background: #1789F7;
             transition: .4s;
     
             &::before {
                 content: '';
-                @include positionSetting(absolute, null, null, 0, 50%, null);
-                @include boxSetting(null, 0, 0, null, null);
+                position: absolute;
+                bottom: 0;
+                width: 0;
+                height: 0;
                 border-style: solid;
                 border-width: 6px 4px 0 4px;
                 border-color: #1789F7 transparent transparent transparent;
+                left: 50%;
                 transform: translateX(-50%) translateY(100%);
             }
     
             .message-text {
-                @include fontSetting(12px, null, bold);
+                font-size: 12px;
+                font-weight: bold;
             }
         }
         
         .progress-bar {
-            @include boxSetting(null, 350px, 30px, null, 2.7px 2.1px);
+            width: 350px;
+            height: 30px;
+            padding: 2.7px 2.1px;
             border-radius: 20px;
             background: #fff;
     
@@ -110,20 +105,25 @@
         margin: 0 auto 38px;
     
         .question-wrap {
-            @include boxSetting(null, 100%, 480px, 20px 20px, 0 0 12px 0);
+            width: 100%;
+            height: 480px;
             text-align: center;
+            padding: 20px 20px;
+            margin-bottom: 12px;
             border-radius: 15px;
             background: #fff;
     
             .question-number {
                 text-align: center;
                 font-weight: bold;
-                margin: 0 auto 18px;
+                margin: 0 auto;
+                margin-bottom: 18px;
     
                 p {
-                    @include fontSetting(19px, #1789F7, null);
                     line-height: 33.7px;
+                    font-size: 19px;
                     font-family: ONE Mobile POP;
+                    color: #1789F7;
                 }
             }
     
@@ -137,7 +137,9 @@
             }
     
             .question-img {
-                @include boxSetting(null, 200px, 200px, null, 0 0 10px 0);
+                width: 200px;
+                height: 200px;
+                margin-bottom: 10px;
             }
     
             .question-click-item-wrap {
@@ -146,7 +148,9 @@
                 width: 100%;
     
                 .question-click-item {
-                    @include boxSetting(null, 150px, 98px, 10px 0 0 0, null);
+                    width: 150px;
+                    height: 98px;
+                    padding-top: 10px;
                     border: 3px solid #000;
                     border-radius: 10px;
                     font-weight: bold;
@@ -157,7 +161,8 @@
                         color: #fff;
     
                         .click-state {
-                            @include backgroundSetting('../img/check-active.png', cover);
+                            background: url('../img/check-active.png') no-repeat;
+                            background-size: cover;
                         }
                     }
     
@@ -169,8 +174,11 @@
                     }
     
                     .click-state {
-                        @include boxSetting(null, 17px, 17px, null, 7px auto 0);
-                        @include backgroundSetting('../img/check.png', cover);
+                        width: 17px;
+                        height: 17px;
+                        background: url('../img/check.png') no-repeat;
+                        background-size: cover;
+                        margin: 7px auto 0;
                         transition: .3s;
                         pointer-events: none;
                     }
@@ -187,8 +195,13 @@
             height: 70px;
 
             img {
-                @include boxSetting(none, 100%, 100%, null, null);
-                &.active { display: block; }
+                display: none;
+                width: 100%;
+                height: 100%;
+
+                &.active {
+                    display: block;
+                }
             }
         }
     }

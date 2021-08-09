@@ -1,37 +1,11 @@
-@mixin boxSetting($display, $width, $height, $padding, $margin) {
-    display: $display;
-    width: $width;
-    height: $height;
-    padding: $padding;
-    margin: $margin;
-}
+body {
 
-@mixin backgroundSetting($bg, $bgSize) {
-    background: url($bg) no-repeat;
-    background-size: $bgSize;
-}
-
-@mixin positionSetting($pos, $top, $right, $bottom, $left, $zIndex) {
-    position: $pos;
-    top: $top;
-    right: $right;
-    bottom: $bottom;
-    left: $left;
-    z-index: $zIndex;
-}
-
-@mixin fontSetting($size, $color, $weight) {
-    font-size: $size;
-    color: $color;
-    font-weight: $weight;
-}
-
-
-body.noneScroll {
-    height: 100%;
-    min-height:100%;
-    overflow: hidden;
-    touch-action: none;
+    &.noneScroll {
+        height: 100%;
+        min-height:100%;
+        overflow: hidden;
+        touch-action: none;
+    }
 }
 
 .wrap {
@@ -40,88 +14,109 @@ body.noneScroll {
 
     > div {
         max-width: 350px;
+        margin: 0 auto;
     }
 
     .result-title-wrap {
-        @include boxSetting(null, 220px, 40px, null, 0 auto 20px);
+        width: 220px;
+        height: 40px;
         line-height: 41px;
         text-align: center;
         border-radius: 12px;
         background: #023784;
+        margin-bottom: 20px;
         
         .title {
-            @include fontSetting(22px, #fff, null);
+            color: #fff;
+            font-size: 22px;
             font-family: ONE Mobile POP;
         }
     }
 
     .result-mbti-title-wrap {
         text-align: center;
-        margin: 0 auto;
 
         .result-mbti-sub-title {
-            @include fontSetting(27px, #B7FFFE, null);
+            font-size: 27px;
             font-family: ONE Mobile POP;
+            color: #B7FFFE;
             margin-bottom: 5px;
         }
 
         .result-mbti-title {
-            @include fontSetting(42px, #fff, null);
+            font-size: 42px;
+            color: #fff;
             font-family: ONE Mobile POP;
         }
     }
 
     .result-mbti-img-wrap {
         text-align: center;
-        margin: 0 auto 20px;
+        margin-bottom: 20px;
 
         img {
-            @include boxSetting(null, 230px, 230px, null, null);
+            width: 230px;
+            height: 230px;
         }
     }
 
     .result-text-box {
-        @include boxSetting(null, null, null, 36px 25px, 0 auto 35px);
+        padding: 36px 25px;
+        margin-bottom: 35px;
         border-radius: 20px;
         background: #fff;
 
         .result-box-sub-title {
-            @include fontSetting(19px, #023784, bold);
+            font-size: 19px;
+            color: #023784;
+            font-weight: 900;
             text-align: center;
             letter-spacing: -1px;
             margin-bottom: 8px;
         }
 
         .result-box-title-wrap {
-            @include boxSetting(null, fit-content, null, null, 0 auto 20px);
+            width: fit-content;
+            margin: 0 auto 20px;
+            margin-bottom: 20px;
             position: relative;
 
             .result-box-title {
-                @include fontSetting(33px, #002dad, null);
-                @include positionSetting(relative, null, null, null, null, 10);
+                font-size: 33px;
+                color: #002dad;
                 font-family: ONE Mobile POP;
                 text-align: center;
                 letter-spacing: -2px;
+                position: relative;
+                z-index: 10;
             }
 
             &::after {
                 content: "";
-                @include boxSetting(null, 100%, 12px, null, null);
-                @include positionSetting(absolute, null, null, 0, 0, 0);
+                position: absolute;
+                width: 100%;
+                height: 12px;
                 background-color: #ffecb8;
+                bottom: 0;
+                left: 0;
+                z-index: 0;
             }
         }
 
         .result-box-text-title-wrap {
-            @include boxSetting(flex, null, null, null, 0 0 10px 0);
+            display: flex;
             align-items: flex-end;
+            margin-bottom: 10px;
 
             img {
-                @include boxSetting(null, 29px, 25px, null, 0 3px 0 0);
+                width: 29px;
+                height: 25px;
+                margin-right: 3px;
             }
 
             .result-box-text-title {
-                @include fontSetting(null, #023784, bold);
+                color: #023784;
+                font-weight: 900;
                 letter-spacing: -1px;
             }
         }
@@ -133,55 +128,74 @@ body.noneScroll {
     }
 
     .result-bad-good-card-box-wrap {
-        @include boxSetting(flex, null, null, null, 0 auto 50px);
+        display: flex;
         justify-content: space-between;
+        margin-bottom: 50px;
 
         .result-card {
-            @include boxSetting(null, 171px, 220px, 20px 0 0 0, null);
+            width: 171px;
+            height: 220px;
+            padding-top: 20px;
             text-align: center;
             position: relative;
             border-radius: 18px;
             background: #fff;
 
             .card-title {
-                @include boxSetting(null, 112px, 39px, null, null);
-                @include fontSetting(22px, #fff, null);
-                @include positionSetting(absolute, null, null, 200px, 30px, null);
+                width: 112px;
+                height: 39px;
                 line-height: 39px;
                 text-align: center;
+                color: #fff;
+                font-size: 22px;
                 font-family: ONE Mobile POP;
                 border-radius: 12px;
                 background: #023784;
+                position: absolute;
+                bottom: 200px;
+                left: 30px;
             }
         }
 
         img {
-            @include boxSetting(null, 140px, 140px, null, 0 0 15px 0);
+            width: 140px;
+            height: 140px;
+            margin-bottom: 15px;
         }
 
         .result-card-text-wrap {
-            @include boxSetting(null, fit-content, null, null, 0 auto);
+            width: fit-content;
             position: relative;
+            margin: 0 auto;
 
             .result-card-text {
-                @include fontSetting(22px, #023784, null);
-                @include positionSetting(relative, null, null, null, null, 10);
+                font-size: 22px;
                 font-family: ONE Mobile POP;
+                color: #023784;
                 letter-spacing: -1.5px;
+                position: relative;
+                z-index: 10;
             }
 
             &::after {
                 content: "";
-                @include boxSetting(null, 100%, 8px, null, null);
-                @include positionSetting(absolute, null, null, 0, 0, 0);
+                position: absolute;
+                width: 100%;
+                height: 8px;
                 background-color: #ffecb8;
+                bottom: 0;
+                left: 0;
+                z-index: 0;
             }
         }
     }
     .banner-img {
-        @include boxSetting(null, 100%, 125px, null, 0 0 50px 0);
-        @include backgroundSetting("../img/banner.png", auto 125px);
         max-width: none;
+        height: 125px;
+        width: 100%;
+        margin-bottom: 50px;
+        background:url("../img/banner.png");
+        background-size: auto 125px;
         background-position: center;
     }
 
@@ -189,14 +203,22 @@ body.noneScroll {
         margin: 0 auto 35px;
         
         .view-btn {
-            @include boxSetting(null, 350px, 70px, null, null);
-            @include backgroundSetting('../img/view-btn-img.png', cover);
+            width: 350px;
+            height: 70px;
             text-indent: -9999px;
+            background: url('../img/view-btn-img.png') no-repeat;
+            background-size: cover;
         }
 
         .view-wrap {
-            @include boxSetting(none, 100%, 100%, 0 20px, null);
-            @include positionSetting(fixed, 0, null, null, 0, 20);
+            display: none;
+            width: 100%;
+            height: 100%;
+            padding: 0 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 20;
             background: #00000099;
 
             @keyframes openDimAni {
@@ -226,10 +248,13 @@ body.noneScroll {
             }
 
             .top-img-wrap {
-                @include positionSetting(relative, 60px, null, null, null, 10);
                 max-width: 250px;
+                position: relative;
+                top: 60px;
                 opacity: 0;
                 transition: .5s;
+                z-index: 10;
+                
 
                 img {
                     width: 100%;
@@ -237,27 +262,36 @@ body.noneScroll {
             }
 
             .view-all-type-box {
-                @include boxSetting(null, 100%, 500px, 0 20px, 0 0 100px 0);
                 max-width: 700px;
                 min-width: 360px;
+                width: 100%;
+                height: 500px;
+                padding: 0 20px;
+                margin-bottom: 100px;
                 position: relative;
                 border-radius: 20px;
                 border: 5px solid #000;
                 background: #fff;
 
                 .close-btn-wrap {
-                    @include boxSetting(null, null, null, 15px 0 0 0, 0 0 15px 0);
+                    padding-top: 15px;
+                    margin-bottom: 15px;
 
                     button {
-                        @include boxSetting(flex, 35px, 35px, null, 0 0 0 auto);
-                        @include backgroundSetting("../img/close-icon.png", 100%);
+                        display: flex;
+                        width: 35px;
+                        height: 35px;
                         text-indent: -9999px;
+                        margin: 0 0 0 auto;
+                        background: url("../img/close-icon.png") no-repeat;
+                        background-size: 100%;
                     }
                 }
 
                 .view-all-type-box-title {
-                    @include fontSetting(30px, #023784, null);
+                    font-size: 30px;
                     font-family: ONE Mobile POP;
+                    color: #023784;
                     text-align: center;
                     margin-bottom: 15px;
                 }
@@ -267,38 +301,49 @@ body.noneScroll {
                     height: 350px;
 
                     ul {
-                        @include boxSetting(flex, null, 100%, null, null);
+                        display: flex;
                         flex-wrap: wrap;
                         justify-content: center;
+                        height: 100%;
 
                         li {
-                            @include boxSetting(null, 100px, null, null, 0 25px 10px);
-                            @media (max-width: 600px){ margin: 0 0 10px 0;     }
+                            width: 100px;
+                            margin: 0 25px 10px;
+                            @media (max-width: 600px){
+                                margin: 0 0 10px 0;    
+                            }
 
                             img {
                                 width: 100%;
                             }
 
                             p {
-                                @include fontSetting(18px, #023784, bold);
                                 text-align: center;
+                                font-size: 18px;
                                 font-family: ONE Mobile POP;
+                                font-weight: 900;
+                                color: #023784;
                             }
                         }
                     }
                 }
             }
+
+            
         }
+        
     }
 
     .return-btn-wrap {
         text-align: center;
-        margin: 0 auto;
         
         .return-btn {
-            @include boxSetting(block, 360px, 70px, null, null);
-            @include backgroundSetting("../img/return-btn.png", cover);
+            display: block;
+            width: 360px;
+            height: 70px;
             text-indent: -9999px;
+            background: url("../img/return-btn.png") no-repeat;
+            background-size: cover;
         }
     }
 }

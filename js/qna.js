@@ -18,6 +18,8 @@ function itemClickEvent(e) {
 
 // element 생성 || 값 세팅 함수
 function createEl(question, i) {
+
+    // element 생성, 클레스부여, 텍스트성정, url설정 묶음 함수
     const setCreateFc = (element, addClass, setText, setSrc) => {
         const el = document.createElement(element);
         el.classList.add(addClass);
@@ -34,8 +36,6 @@ function createEl(question, i) {
     const questionClickItemWrap = setCreateFc('div', 'question-click-item-wrap', null, null);      // 선택 지 wrap element 생성 || 클레스 선언 저장 변수
 
     // 질문 박스 element 안에 변수들 선언
-    // const contents = questionNumber, questionTitle, questionImge, questionClickItemWrap;
-    // questionWrap.append({})
     questionWrap.append(questionNumber);
     questionWrap.append(questionTitle);
     questionWrap.append(questionImge);

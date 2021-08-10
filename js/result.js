@@ -66,6 +66,9 @@ function createElements() {
         mbtisLink.appendChild(mbtisImg);
         mbtisLink.appendChild(mbtisText)
     })
+
+    setTimeout(() => { document.querySelector('.loader-wrap').classList.add('active') }, 3000);
+    setTimeout(() => { document.querySelector('.loader-wrap').remove() }, 3300);
 }
 
 createElements();

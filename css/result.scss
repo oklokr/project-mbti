@@ -38,10 +38,6 @@ body.noneScroll {
     padding: 40px 0 40px 0;
     background: #0080ff;
 
-    > div {
-        max-width: 350px;
-    }
-
     .result-title-wrap {
         @include boxSetting(null, 220px, 40px, null, 0 auto 20px);
         line-height: 41px;
@@ -72,7 +68,6 @@ body.noneScroll {
     }
 
     .result-mbti-img-wrap {
-        text-align: center;
         margin: 0 auto 20px;
 
         img {
@@ -82,12 +77,12 @@ body.noneScroll {
 
     .result-text-box {
         @include boxSetting(null, null, null, 36px 25px, 0 auto 35px);
+        max-width: 350px;
         border-radius: 20px;
         background: #fff;
 
         .result-box-sub-title {
             @include fontSetting(19px, #023784, bold);
-            text-align: center;
             letter-spacing: -1px;
             margin-bottom: 8px;
         }
@@ -100,7 +95,6 @@ body.noneScroll {
                 @include fontSetting(33px, #002dad, null);
                 @include positionSetting(relative, null, null, null, null, 10);
                 font-family: ONE Mobile POP;
-                text-align: center;
                 letter-spacing: -2px;
             }
 
@@ -129,16 +123,22 @@ body.noneScroll {
         .reulst-box-text {
             line-height: 20px;
             letter-spacing: -1px;
+            text-align: left;
+            margin-bottom: 16px;
+        }
+
+        .warning-text {
+            @include fontSetting(14px, #8e0000, null);
         }
     }
 
     .result-bad-good-card-box-wrap {
         @include boxSetting(flex, null, null, null, 0 auto 50px);
+        max-width: 350px;
         justify-content: space-between;
 
         .result-card {
             @include boxSetting(null, 171px, 220px, 20px 0 0 0, null);
-            text-align: center;
             position: relative;
             border-radius: 18px;
             background: #fff;
@@ -148,7 +148,6 @@ body.noneScroll {
                 @include fontSetting(22px, #fff, null);
                 @include positionSetting(absolute, null, null, 200px, 30px, null);
                 line-height: 39px;
-                text-align: center;
                 font-family: ONE Mobile POP;
                 border-radius: 12px;
                 background: #023784;
@@ -181,12 +180,11 @@ body.noneScroll {
     .banner-img {
         @include boxSetting(null, 100%, 125px, null, 0 0 50px 0);
         @include backgroundSetting("../img/banner.png", auto 125px);
-        max-width: none;
         background-position: center;
     }
 
     .view-all-type-btn-wrap {
-        margin: 0 auto 35px;
+        margin-bottom: 35px;
         
         .view-btn {
             @include boxSetting(null, 350px, 70px, null, null);
@@ -258,7 +256,6 @@ body.noneScroll {
                 .view-all-type-box-title {
                     @include fontSetting(30px, #023784, null);
                     font-family: ONE Mobile POP;
-                    text-align: center;
                     margin-bottom: 15px;
                 }
 
@@ -281,7 +278,6 @@ body.noneScroll {
 
                             p {
                                 @include fontSetting(18px, #023784, bold);
-                                text-align: center;
                                 font-family: ONE Mobile POP;
                             }
                         }
@@ -291,14 +287,9 @@ body.noneScroll {
         }
     }
 
-    .return-btn-wrap {
-        text-align: center;
-        margin: 0 auto;
-        
-        .return-btn {
-            @include boxSetting(block, 360px, 70px, null, null);
-            @include backgroundSetting("../img/return-btn.png", cover);
-            text-indent: -9999px;
-        }
+    .return-btn-wrap .return-btn {
+        @include boxSetting(block, 360px, 70px, null, 0 auto);
+        @include backgroundSetting("../img/return-btn.png", cover);
+        text-indent: -9999px;
     }
 }

@@ -112,9 +112,10 @@ body.noneScroll {
         }
 
         .mbti-result-slide-wrap {
-            @include boxSetting(flex, 900px, 330px, null,  0 0 20px 0);
+            @include boxSetting(flex, 900px, 330px, null,  0 0 300px 0);
             justify-content: center;
             position: relative;
+            @media (max-width: 500px){ margin: 0 0 250px 0 };
 
             .swiper-container {
                 width: 100%;
@@ -245,32 +246,6 @@ body.noneScroll {
                         overflow-y: auto;
                     }
                 }
-            }
-        }
-
-        .download-btn-wrap {
-            padding-top: 40px;
-            margin-bottom: 100px;
-
-            .download-title {
-                @include fontSetting(22px, #fff, null);
-                height: 50px;
-                line-height: 25px;
-                letter-spacing: -2px;
-                margin-bottom: 13px;
-
-                @media (max-width: 500px){ font-size: 20px; }
-
-                span {
-                    color: #ffe000;
-                    font-weight: bold;
-                }
-            }
-
-            .download-btn {
-                @include boxSetting(block, 350px, 70px, null, 0 auto);
-                @include backgroundSetting("../img/download-btn.png", cover);
-                text-indent: -9999px;
             }
         }
 

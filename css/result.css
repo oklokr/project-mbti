@@ -11,10 +11,6 @@ body.noneScroll {
   background: #0080ff;
 }
 
-.wrap > div {
-  max-width: 350px;
-}
-
 .wrap .result-title-wrap {
   width: 220px;
   height: 40px;
@@ -50,7 +46,6 @@ body.noneScroll {
 }
 
 .wrap .result-mbti-img-wrap {
-  text-align: center;
   margin: 0 auto 20px;
 }
 
@@ -62,6 +57,7 @@ body.noneScroll {
 .wrap .result-text-box {
   padding: 36px 25px;
   margin: 0 auto 35px;
+  max-width: 350px;
   border-radius: 20px;
   background: #fff;
 }
@@ -70,7 +66,6 @@ body.noneScroll {
   font-size: 19px;
   color: #023784;
   font-weight: bold;
-  text-align: center;
   letter-spacing: -1px;
   margin-bottom: 8px;
 }
@@ -89,7 +84,6 @@ body.noneScroll {
   position: relative;
   z-index: 10;
   font-family: ONE Mobile POP;
-  text-align: center;
   letter-spacing: -2px;
 }
 
@@ -129,6 +123,13 @@ body.noneScroll {
 .wrap .result-text-box .reulst-box-text {
   line-height: 20px;
   letter-spacing: -1px;
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.wrap .result-text-box .warning-text {
+  font-size: 14px;
+  color: #8e0000;
 }
 
 .wrap .result-bad-good-card-box-wrap {
@@ -136,6 +137,7 @@ body.noneScroll {
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto 50px;
+  max-width: 350px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -145,7 +147,6 @@ body.noneScroll {
   width: 171px;
   height: 220px;
   padding: 20px 0 0 0;
-  text-align: center;
   position: relative;
   border-radius: 18px;
   background: #fff;
@@ -160,7 +161,6 @@ body.noneScroll {
   bottom: 200px;
   left: 30px;
   line-height: 39px;
-  text-align: center;
   font-family: ONE Mobile POP;
   border-radius: 12px;
   background: #023784;
@@ -206,12 +206,11 @@ body.noneScroll {
   margin: 0 0 50px 0;
   background: url("../img/banner.png") no-repeat;
   background-size: auto 125px;
-  max-width: none;
   background-position: center;
 }
 
 .wrap .view-all-type-btn-wrap {
-  margin: 0 auto 35px;
+  margin-bottom: 35px;
 }
 
 .wrap .view-all-type-btn-wrap .view-btn {
@@ -349,7 +348,6 @@ body.noneScroll {
   font-size: 30px;
   color: #023784;
   font-family: ONE Mobile POP;
-  text-align: center;
   margin-bottom: 15px;
 }
 
@@ -389,19 +387,14 @@ body.noneScroll {
   font-size: 18px;
   color: #023784;
   font-weight: bold;
-  text-align: center;
   font-family: ONE Mobile POP;
-}
-
-.wrap .return-btn-wrap {
-  text-align: center;
-  margin: 0 auto;
 }
 
 .wrap .return-btn-wrap .return-btn {
   display: block;
   width: 360px;
   height: 70px;
+  margin: 0 auto;
   background: url("../img/return-btn.png") no-repeat;
   background-size: cover;
   text-indent: -9999px;

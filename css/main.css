@@ -119,11 +119,17 @@ body.noneScroll {
   display: flex;
   width: 900px;
   height: 330px;
-  margin: 0 0 20px 0;
+  margin: 0 0 300px 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
+}
+
+@media (max-width: 500px) {
+  .page2 .page2-inner .mbti-result-slide-wrap {
+    margin: 0 0 250px 0;
+  }
 }
 
 .page2 .page2-inner .mbti-result-slide-wrap .swiper-container {
@@ -334,41 +340,6 @@ body.noneScroll {
   text-align: left;
   overflow: hidden;
   overflow-y: auto;
-}
-
-.page2 .page2-inner .download-btn-wrap {
-  padding-top: 40px;
-  margin-bottom: 100px;
-}
-
-.page2 .page2-inner .download-btn-wrap .download-title {
-  font-size: 22px;
-  color: #fff;
-  height: 50px;
-  line-height: 25px;
-  letter-spacing: -2px;
-  margin-bottom: 13px;
-}
-
-@media (max-width: 500px) {
-  .page2 .page2-inner .download-btn-wrap .download-title {
-    font-size: 20px;
-  }
-}
-
-.page2 .page2-inner .download-btn-wrap .download-title span {
-  color: #ffe000;
-  font-weight: bold;
-}
-
-.page2 .page2-inner .download-btn-wrap .download-btn {
-  display: block;
-  width: 350px;
-  height: 70px;
-  margin: 0 auto;
-  background: url("../img/download-btn.png") no-repeat;
-  background-size: cover;
-  text-indent: -9999px;
 }
 
 .page2 .page2-inner .sns-sharing-wrap {

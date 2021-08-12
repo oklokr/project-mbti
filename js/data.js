@@ -167,7 +167,7 @@ const mbti = [
 // 이미지 수정 시 img 수정 주의사항은 상단의 주석 확인바람
 const question = [
     {
-        q: "수산시장에서의 약속 날!<br> 도착 후 시계를 보니!?",
+        q: "시장에서 밥 먹기로 약속한 날!<br> 도착 후 시계를 보니!?",
         img: "/mbti/img/qusetion-img/01.png",
         a: [
             {answer: "늦는건 못참아!<br>난 언제나 10분전 도착.", type:"j"},
@@ -255,6 +255,7 @@ const question = [
         ]
     },
     {
+        // 약속 후 회사에서 급한일이 생겼다.. 나의 선택은??
         q: "약속 후, 회사에서 내일까지<br>해야하는 일을 말한다. 나는?",
         img: "/mbti/img/qusetion-img/12.png",
         a: [
